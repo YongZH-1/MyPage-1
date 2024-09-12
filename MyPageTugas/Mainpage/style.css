@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+@media screen and (max-width: 1900px) {
+    .paragraf {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .judul-1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .paragraf {
+        font-size: 15px;
+        text-align: right;
+    }
+
+    .judul-1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .paragraf {
+        font-size: 12px;
+    }
+
+    .judul-1 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content {
+        transition: none;
+    }
+}
+
+.slide1{
+    background-image: url(bg.webs.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: none;
+}
+
+.header a{
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.3));
+}
+
+.logo{
+    font-size: 30px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;  
+    text-align: center;
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.navbar a{
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1.5px;
+    background: aliceblue;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navbar a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.login{
+    all: unset;
+    color: #1a1f27;
+    background-color: rgb(245, 245, 245);
+    font-size: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+.login:hover{
+    background-color: rgb(57, 65, 82);
+    color: aliceblue;
+}
+
+.isi-1{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0vh 5vw 5vh 0vw;
+}
+
+.paragraf{
+    margin-left: 6.7rem;
+    max-width: 47vw;
+    height: auto;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    filter: drop-shadow(0 0 1rem rgba(25, 0, 0, 0.392));
+}
+
+.judul-1  {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: right;
+}
+
+.kontak{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 2em 0em 0em 0em;
+    color: aliceblue;
+    font-family: "Gugi", sans-serif;
+    text-align: right;
+}
+
+.button-kontak button{
+    all: unset;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.177);
+    backdrop-filter: blur(15px);
+    font-size: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.button-kontak button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.title-porto{ 
+    width: 100vw;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.porto-h1 h1{
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+}
+.porto-h1{
+    color: white;
+    width: fit-content;
+    margin-top: 10rem;
+}
+
+.disclamer{
+    font-size: 15px;
+    text-align: center;
+    padding-left: 13rem;
+}
+
+.skill{
+    background-color: black;
+}
+
+h2{
+    color: #ffffff;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 800px;
+    height: 400px;
+    padding: 40px;
+}
+
+.porto{
+    height: 70vh;
+    background-color: black;
+    display: flex;
+}
+
+.isi{
+    height: 70vh;	
+    width: 40vw;
+}
+.isi h1{
+    font-size: 60px;
+    position: relative;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    margin-left: 6rem;
+    margin-top: 10rem;
+}
+
+.nomer-isi-porto{
+    font-size: 25px;
+}
+
+.isi-porto-kanan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-1 {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 15vw;
+    height: 40vh;
+    margin: 0px 7px;
+    margin-left: 40px;
+    transition: 0.50s ease-out;
+}
+.card-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    
+}
+
+.card-2 {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 15vw;
+    height: 40vh;
+    margin: 0px 7px;
+    transition: 0.50s ease-out;
+}
+
+.card-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.card-3 {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 15vw;
+    height: 40vh;
+    margin: 0px 7px;
+    transition: 0.50s ease-out;
+}
+
+.card-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+#Skills h1 {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 5vw;
+    padding-top: 90px;
+}
+
+.skills-container h3{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 2vw;
+}
+
+.skills-container{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    
+
+
+    .flex{
+        display: flex;
+        margin: 20px;
+        align-items: center;
+    }
+    .flex h2 {
+        font-family: "Inter Tight", sans-serif;
+        font-size: 2vw;
+    }
+    }
+    .bar{
+        width: 70%;
+        height: 30px;
+        border: 1px solid whitesmoke;
+        margin: 0 20px;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+    }
+    .inside1{
+        border-radius: 0px;
+        width: 90%;
+        height: 29px;
+        background: whitesmoke;
+        animation: slide1 2s ease-in-out;
+    }
+    .inside2{
+        border-radius: 0px;
+        width: 80%;
+        height: 29px;
+        background: whitesmoke;
+        @include style(80%);
+        animation: slide2 2s ease-in-out;
+    }
+    .inside3{
+        border-radius: 0px;
+        width: 1%;
+        height: 29px;
+        @include style(55%);
+        background: whitesmoke;
+        animation: slide3 2s ease-in-out;
+    }
+    .inside4{
+        border-radius: 0px;
+        width: 0%;
+        height: 29px;
+        @include style(55%);
+        background: whitesmoke;
+        animation: slide4 2s ease-in-out;
+    }
+
+    .CSS-title{
+        padding-right: 6vw;
+        
+    }
+
+    .PHP-title{
+        padding-right: 6vw;
+    }
+
+    .HTML-title{
+        padding-right: 4.3vw;
+    }
+
+
+
+@keyframes slide1{
+from{
+    width: 0;
+}
+to{
+    width: 90%;
+}
+}
+@keyframes slide2{
+from{
+    width: 0;
+}
+to{
+    width: 80%;
+}
+}
+@keyframes slide3{
+from{
+    width: 0;
+}
+to{
+    width: 1%;
+}
+}
+@keyframes slide4{
+    from{
+        width: 0;
+    }
+    to{
+        width: 0%;
+    }
+}
+footer{
+    width: 100%;
+    height: 50vh;
+    background-color: #1a1f27;
+}
+
+.foot{
+    display: flex;
+    flex-direction: wrap;
+}
+
+.foot1{
+    height: 100%;
+    width: 33.333vw;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.foot1 p{
+    color: white;
+    padding: 0px 30px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.foot2{
+    height: 100%;
+    width: 33.333vw;
+
+}
+.foot3{
+    height: 100%;
+    width: 33.333vw;
+
+}
+
+
+.foot1 h1{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 4vw;
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+.foot1 span{
+    font-size: 40px;
+}
+
+.foot2{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 3vw;
+    padding-top: 40px;
+    padding-left: 50px;
+}
+
+.foot3{
+    color: white;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 2vw;
+    padding-top: 80px;
+    text-align: center;
+}
+
+
